@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f8f8ff;
+	background-image: url("/images/background-light.jpg");
+	color: black;
+	display: flex;
+	font-family: 'Muli', sans-serif;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+p {
+	margin: 5px 0;
+}
+
+h2 {
+	margin: 10px 0 20px;
+	text-align: center;
+}
+
+label {
+	color: black;
+	font-family: 'Muli', sans-serif;
+}
+
+
+optgroup {
+color: #0474fc; 
+font-weight: bold;
+font-size: 14px;
+}
+
+.status {
+	text-align: right;
+	font-family: 'Muli', sans-serif;
+	color: #0474fc;
+	font-weight: bold;
+}
+
+.container {
+	background-color: white;
+	box-shadow: 0px 2px 5px #f8f8ff30;
+	padding: 20px;
+	width: 400px;
+	max-width: 100%;
+	border-radius: 60px;
+}
+
+.result-container {
+	background-color: #f8f8ff;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+	border-radius: 70px;
+}
+
+.result-container #result {
+  	word-wrap: break-word;
+	max-width: calc(100% - 40px);
+	color: black;
+	font-weight: bolder;
+	font-family: 'Muli', sans-serif;
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #0474fc;
+	border-radius: 70px;
+	border: none;
+	outline: none;
+}
+
+.btn-large {
+	display: block;
+	width: 80%;
+	margin-left: 35px;
+	border: none;
+	outline: none;
+	font-family: 'Muli', sans-serif;
+}
+
+.btn:hover {
+	background-color: #045ccc;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}
+
+
+/* light/dark mode toggle */
+.toggler {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	background: #292C35;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #f8f8ff;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #111;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
